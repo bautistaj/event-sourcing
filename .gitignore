@@ -1,0 +1,4 @@
+./zookeeper_data
+./kafka_data
+./mongodb_data
+./mysql_data
