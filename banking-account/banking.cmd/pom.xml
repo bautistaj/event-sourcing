@@ -34,5 +34,15 @@
             <artifactId>spring-kafka</artifactId>
             <version>${spring-boot.kafka.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.banking</groupId>
+            <artifactId>cqrs.core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.banking</groupId>
+            <artifactId>banking.common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 </project>
