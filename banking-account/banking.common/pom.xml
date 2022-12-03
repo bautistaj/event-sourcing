@@ -18,8 +18,9 @@
 
     <dependencies>
         <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
+            <groupId>com.banking</groupId>
+            <artifactId>cqrs.core</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 </project>
