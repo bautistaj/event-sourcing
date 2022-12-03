@@ -28,9 +28,9 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'evenetDourcing'
-      MYSQL_PASSWORD: 'evenetDourcing2022$$'
-      MYSQL_ROOT_PASSWORD: 'evenetDourcing2022$$'
+      MYSQL_USER: 'eventSourcing'
+      MYSQL_PASSWORD: 'eventSourcing2022$$'
+      MYSQL_ROOT_PASSWORD: 'eventSourcing2022$$'
     ports:
       - '3306:3306'
     expose:
@@ -41,8 +41,8 @@ services:
     image: mongo:latest
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "evenetDourcing"
-      MONGO_INITDB_ROOT_PASSWORD: "evenetDourcing2022$$"
+      MONGO_INITDB_ROOT_USERNAME: "eventSourcing"
+      MONGO_INITDB_ROOT_PASSWORD: "eventSourcing2022$$"
     ports:
       - 27017:27017
     volumes:
