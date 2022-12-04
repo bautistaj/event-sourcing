@@ -1,6 +1,7 @@
 package com.banking.common.events;
 
 import com.banking.common.dto.AccountType;
+import com.banking.cqrs.core.events.BaseEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import java.util.Date;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountOpenedEvent {
+public class AccountOpenedEvent extends BaseEvent {
     private String accountHolder;
     private AccountType accountType;
     private Date createDate;
