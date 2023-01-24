@@ -1,4 +1,5 @@
 version: "3.4"
+
 services:
   zookeeper:
     image: bitnami/zookeeper
@@ -23,26 +24,22 @@ services:
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
     depends_on:
       - zookeeper
-  mysql:
-    image: mysql:latest
-    restart: always
+  event_data_base:
+    image: postgres:13
     environment:
-      MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'eventSourcing'
-      MYSQL_PASSWORD: 'eventSourcing2022$$'
-      MYSQL_ROOT_PASSWORD: 'eventSourcing2022$$'
+      - POSTGRES_DB=eventSourcing
+      - POSTGRES_USER=eventSourcing
+      - POSTGRES_PASSWORD=eventSourcing
     ports:
-      - '3306:3306'
-    expose:
-      - '3306'
+      - '5434:5432'
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ~/data_volums_docker/postventa_database:/var/lib/postgresql/data
   mongodb:
     image: mongo:latest
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "eventSourcing"
-      MONGO_INITDB_ROOT_PASSWORD: "eventSourcing2022$$"
+      MONGO_INITDB_ROOT_USERNAME: "vaxidrez"
+      MONGO_INITDB_ROOT_PASSWORD: "VaxiDrez2005$$"
     ports:
       - 27017:27017
     volumes:
@@ -58,4 +55,4 @@ volumes:
     driver: local
 networks:
   default:
-    name: banking_net
+    name: bankingNetwork

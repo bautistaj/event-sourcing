@@ -2,12 +2,12 @@ package com.banking.account.query.domain;
 
 import com.banking.common.dto.AccountType;
 import com.banking.cqrs.core.domain.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Entity;
+import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 

@@ -1,17 +1,32 @@
 server:
-  port: 5001
+  port: 7501
 
+  #spring.datasource.url=jdbc:postgresql://top-bd:5432/top
+  #spring.datasource.username=top
+  #spring.datasource.password=top
+
+  #Logging configuration
+  #logging.level.org.hibernate.SQL=DEBUG
+  #logging.level.org.hibernate.type.descriptor.sql.BasicBinder=INFO
+  #spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+  #spring.jpa.hibernate.ddl-auto = none
+  #spring.jpa.show-sql = false
+  #spring.jpa.properties.hibernate.format_sql=true
 spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
   datasource:
-    url: jdbc:mysql://localhost:3306/bankingAccount?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://localhost:5434/bankingAccount
     username: eventSourcing
-    password: eventSourcing2022$$
+    password: eventSourcing
+
 
   kafka:
     listener:
